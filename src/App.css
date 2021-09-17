@@ -1,20 +1,116 @@
 .App {
+  background-image: url("https://www.techcronus.com/wp-content/uploads/2018/04/cryptocurrency-wallet-1568x1046.jpg");
+  background-position: center;
+  background-size: contain;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.left-wallet {
+  display: flex;
+  padding: 30px 30px;
+  margin: 20px 0;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  min-width: 70vw;
+  border: 1px solid rgba(255, 255, 255, 0.322);
+  border-radius: 10px;
+}
+
+small {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+.wallet-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .left-wallet {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .warning {
+    display: none;
+  }
+}
+
+img {
+  width: 80px;
+  margin: 10px 0;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 600px) {
+  .App {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .wallet-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .left-wallet {
+    min-height: 200px;
+    min-width: 40vw;
+    margin: 0px 10px;
+    padding: 0 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.walletconnect-modal__base {
+  height: 60vh;
+}
+
+.walletconnect-qrcode__image {
+  height: 20vh;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
 .App-header {
-  background-color: #282c34;
+  background-image: url("https://www.techcronus.com/wp-content/uploads/2018/04/cryptocurrency-wallet-1568x1046.jpg");
+  background-position: center;
+  background-size: contain;
+  filter: blur(2px);
+  opacity: 0.7;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,9 +118,9 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
-.App-link {
+/* .App-link {
   color: #61dafb;
 }
 
@@ -35,4 +131,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
